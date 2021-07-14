@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/jpg" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/terminal.css">
+  <script type="text/javascript" src="js/nodes.js"></script>
+  <script src="js/winbox.bundle.js"></script>
+  <title>EL HARI CHADI :: Executing the terminal console...</title>
+
+  <style>
+    .fit {
+      /* set relative picture size */
+      max-width: 80%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var nodesjs = new NodesJs({
+      id: 'nodes',
+      width: window.innerWidth,
+      height: window.innerHeight,
+      particleSize: 2,
+      lineSize: 1,
+      particleColor: [255, 255, 255, 0.3],
+      lineColor: [255, 255, 255],
+      backgroundFrom: [51, 51, 51],
+      backgroundTo: [17, 17, 17],
+      backgroundDuration: 4000,
+      nobg: false,
+      number: window.hasOwnProperty('orientation') ? 30 : 100,
+      speed: 20,
+      pointerCircleRadius: 150
+    });
+  </script>
+  <div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
+    <canvas id="nodes"></canvas>
+  </div>
+  <script type="text/javascript">
+    window.onresize = function() {
+      nodesjs.setWidth(window.innerWidth);
+      nodesjs.setHeight(window.innerHeight);
+    };
+  </script>
+  <div style="position: relative; z-index: 100; ">
+    <div class="container" style="height:auto">
+      <br>
+      <br>
+
+
+      <main>
+        <div class="container rcorners1" style="height:100%;width:100%; padding-top:20px;opacity:0.8;">
+          <nav class="container" style="height:100%;width:100%;opacity:0.8; text-align: center;">
+            <ul style="padding:0;">
+              <li>>>> </li>
+              <li id="home" class="home"> /home </li>
+              <li id="overview" class="overview"> /overview </li>
+              <li id="about" class="about"> /projects </li>
+              <li id="resume" class="resume"> /resume </li>
+
+              <li id="contact" class="contact"> /contact </li>
+
+
+            </ul>
+          </nav>
+          <h1>>EL HARI CHADI:$<span class="cursor">|</span></h1>
+          <h3 id="titre">Your Terminal:</h3>
+
+          <img class="center fit" id="core" src="i/back.png" style="padding-bottom: 20px;padding-top: 20px;width:auto;margin-top: 20px; opacity: 0.3">
+
+          <div class="footer-social-icons" style="text-align: center">
+            <ul class="social-icons">
+              <li><a href="https://linkedin.com/in/chadi-elhari" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://github.com/elhari-chadi" class="social-icon"> <i class="fa fa-github"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <script type="text/javascript" language="JavaScript">
+          function set_body_height() { // set body height = window height
+            $('body').height($(window).height());
+          }
+          $(document).ready(function() {
+            $(window).bind('resize', set_body_height);
+            set_body_height();
+          });
+        </script>
+        <script type="text/javascript" src="terminal.js">
+        </script>
+        <div id="cont">
+          <div id="test">
+            <div id="console" style="scroll-behavior: smooth;"></div>
+          </div>
+        </div>
+        <div id="cont2">
+          <div id="test2">
+            <div id="c2"></div>
+          </div>
+        </div>
+        <div id="mnt"></div>
+      </main>
+
+    </div>
+    <div class="hidden">
+      <div id="about-content">
+        <h2>############</h2>
+        <h4># Second year PFA</h4>
+        <a href="reports/pfa2a.pdf">
+          <h2>VEHICLE SECURITY AND DRIVING ASSISTANT WITH RASPBERRY PI:$ <span class="cursor"></span></h2>
+        </a>
+        <h5># ENSIAS, March 30th 2020 - June 28th 2020</h5>
+        <pre>
+       . . . . ; ? S @ @ @ @ @ @ S ? ; . . . .
+       . . ; S @ @ S * + ; ; + * S @ @ S ; . .
+       , ? @ @ * , . . . . . . . . , * @ @ ? ,
+       ? @ @ ? ; ; ; ; ; ; ; ; ; ; ; ; ? @ @ ?
+       @ @ @ @ @ @ @ @ @ * * @ @ @ @ @ @ @ @ @
+       @ @ % , ; * # @ @ * * @ @ # * ; , % @ @
+       ? @ @ ; . . , ? @ @ @ @ ? , . . ; @ @ ?
+       , ? @ @ * , . . ? @ @ ? . . , * @ @ ? ,
+       . . ; S @ @ S * ? @ @ ? * S @ @ S ; . .
+       . . . . ; ? S @ @ @ @ @ @ S ? ; . . . .
+</pre>
+        <p>
+          As part of my second year's final project, I worked in collaboration with a team to :
+          <br>
+          - Study machine learning procedures and algorithmes in the context of the autonomous car.
+          <br>
+          - Study image processing libraries (OpenCV, Scikit-Image, Scipy and Numpy).
+          <br>
+          - Design, develop and implement a vehicle security and driving assistance system using Raspberry PI.
+        </p>
+
+        <h2>############</h2>
+        <h4># First year internship</span></h4>
+        <a href="reports/stage1a.pdf">
+          <h2>HUMAN RESSOURCES MANAGEMENT WEB APP:$ <span class="cursor"></h2>
+        </a>
+        <h5># AMEXS, October 3rd 2020 - November 26th 2020</h5>
+        <pre>
+       . . . . . . . . , : : : . . . . . . . .
+       . . . . . . ; S @ @ @ @ S ; . . . . . .
+       . . . . . : @ @ @ @ @ @ @ @ ; . . . . .
+       . . . . . , @ @ @ @ @ @ @ @ : . . . . .
+       . . . . , ; + % # @ @ # % + ; : . . . .
+       . . , ? @ @ @ S % % % % S @ @ @ % , . .
+       . . * @ @ @ @ @ @ @ @ @ @ @ @ @ @ ? . .
+       . . S @ @ @ @ @ @ @ @ @ @ @ @ @ @ # , .
+       . . ? @ @ @ @ @ @ @ @ @ @ @ @ @ @ % . .
+       . . . ; + * * * * * * * * * * + ; . . .
+</pre>
+        <p>
+          As part of my first year's internship project, I worked as a Full Stack Developer for AMEXS to :
+          <br>
+          - Design and produce a WEB application capable of giving access to arrangement, management and
+          storage of the various contact details and informations concerning the personnel of the company.
+          <br>
+          # Used technologies : Bootstrap / PHP / MySQL.
+
+        </p>
+
+        <h2>############</h2>
+
+        <h4># Compilation course project</h4>
+        <a href="reports/compilation.pdf">
+          <h2>DEVELOPING A COMPILATOR FOR A LANGUAGE SIMILAR TO C : ZX COMPILATOR:$ <span class="cursor"></span></h2>
+        </a>
+        <h5># ENSIAS, January 2020 - March 2020</h5>
+        <pre>
+       . . . . . . . . : + + : . . . . . . . .
+       . . . , + * : , # @ @ # , : * ; , . . .
+       . . , % @ @ @ @ @ @ @ @ @ @ @ @ % . . .
+       . . , ; @ @ @ @ S ? ? S @ @ @ @ ; . . .
+       . * # @ @ @ @ + . . . . + @ @ @ # # * .
+       . * # # @ @ @ + . . . . + @ @ @ @ # * .
+       . . . ; @ @ @ @ S ? ? S @ @ @ @ ; , . .
+       . . . % @ @ @ @ @ @ @ @ @ @ @ @ % , . .
+       . . . , ; * : , # @ @ # , : * ; , . . .
+       . . . . . . . . : + + : . . . . . . . .
+</pre>
+        <p>
+          As part of the compilation course we take at ENSIAS, I worked in collaboration with a team to :
+          <br>
+          - Create a "ZX" language similar to C, through elaborating a certain grammar.
+          <br>
+          - Developed, and wrote from scratch a lexer and a parser for the "ZX" language.
+          <br>
+          - Performed tests through input codes to preview different outputs of the compilator.
+        </p>
+
+
+        <h2>############</h2>
+        <h4># First year PFA</span></h4>
+        <a href="reports/pfa1a.pdf">
+          <h2>SIMULATING A THERAPEUTIC ROBOT FOR PATIENT REHABILITATION OF STROKE SURVIVORS:$ <span class="cursor"></h2>
+        </a>
+        <h5># ENSIAS, March 2nd 2020 - June 2nd 2020</h5>
+        <pre>
+
+       . . . . . . . . . . . . . . . . . . . .
+       . . . . . . ; : ; * * ; : ; . . . . . .
+       . . . . . . , S # @ @ # S , . . . . . .
+       . . . . . : : % % % % % % : : . . . . .
+       . . . . , @ * @ @ @ @ @ @ * @ , . . . .
+       . . . . , @ * @ @ @ @ @ @ * @ , . . . .
+       . . . . . : : @ @ @ @ @ @ : : . . . . .
+       . . . . . . . ; @ % % @ ; . . . . . . .
+       . . . . . . . . ? : : ? . . . . . . . .
+       . . . . . . . . . . . . . . . . . . . .
+</pre>
+        <p>
+          As part of my first year's final project, I worked in collaboration with a team to :
+          <br>
+          - Study the rehabilitation mechanism of stroke survivors.
+          <br>
+          - Study the realization of an exoskeleton robot for rehabilitation.
+          <br>
+          - Design, develop and produce a simulation of the H1 robot for the rehabilitation of stroke survivors.
+        </p>
+
+      </div>
+
+      <div id="contact-content">
+        <h2>contact-me:$ <span class="cursor"></span></h2>
+        <p> You can contact me at the emails and phone number
+          below.</p>
+        <ul>
+          <li>Phone: (212)626208830</li>
+          <li>Email: chadi_elhari@um5.ac.ma</li>
+          <li>Email: elhari.chadi@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+  </div>
+</body>
+
+</html>
