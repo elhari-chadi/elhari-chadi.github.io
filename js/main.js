@@ -59,7 +59,7 @@ overview.addEventListener('click', () => {
     //  window.location.href = "overview.html";
     const overBox = new WinBox({
       title: 'Overview',
-      width: '1000px',
+      width: '80%',
       right: "10%",
       bottom: "4%",
       class: 'no-close ovr',
