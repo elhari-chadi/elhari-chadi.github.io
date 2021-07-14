@@ -87,7 +87,7 @@ about.addEventListener('click', () => {
   if (wAbout == 0) {
     const aboutBox = new WinBox({
       title: 'Projects',
-      width: '700px',
+      width: '350',
       height: '400px',
       top: 25,
       right: 25,
@@ -113,7 +113,7 @@ contact.addEventListener('click', () => {
       title: 'Contact Me',
       background: '#00aa00',
       root: document.getElementById("mnt"),
-      width: '400px',
+      width: '350',
       height: '300px',
       top: 75,
       right: 75,
