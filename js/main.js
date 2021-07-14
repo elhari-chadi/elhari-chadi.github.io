@@ -115,14 +115,14 @@ contact.addEventListener('click', () => {
       root: document.getElementById("mnt"),
       width: '350',
       height: '300px',
-      top: 75,
-      right: 75,
+      top: 25,
+      right: 25,
       onclose: function() {
         wContact = 0
         return false;
       },
-      bottom: 75,
-      left: 75,
+      bottom: 25,
+      left: 25,
       mount: contactContent,
     })
     wContact = contactBox
