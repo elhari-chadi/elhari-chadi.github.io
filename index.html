@@ -1,248 +1,738 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/jpg" href="favicon.ico" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/terminal.css">
-  <script type="text/javascript" src="js/nodes.js"></script>
-  <script src="js/winbox.bundle.js"></script>
-  <title>EL HARI CHADI :: Executing the terminal console...</title>
 
-  <style>
-    .fit {
-      /* set relative picture size */
-      max-width: 80%;
-      max-height: 100%;
-    }
-  </style>
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Portfolio</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.ico">
+
 </head>
 
-<body>
+<body id="top">
 
-  <script type="text/javascript">
-    var nodesjs = new NodesJs({
-      id: 'nodes',
-      width: window.innerWidth,
-      height: window.innerHeight,
-      particleSize: 2,
-      lineSize: 1,
-      particleColor: [255, 255, 255, 0.3],
-      lineColor: [255, 255, 255],
-      backgroundFrom: [51, 51, 51],
-      backgroundTo: [17, 17, 17],
-      backgroundDuration: 4000,
-      nobg: false,
-      number: window.hasOwnProperty('orientation') ? 30 : 100,
-      speed: 20,
-      pointerCircleRadius: 150
-    });
-  </script>
-  <div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
-    <canvas id="nodes"></canvas>
-  </div>
-  <script type="text/javascript">
-    window.onresize = function() {
-      nodesjs.setWidth(window.innerWidth);
-      nodesjs.setHeight(window.innerHeight);
-    };
-  </script>
-  <div style="position: relative; z-index: 100; ">
-    <div class="container" style="height:auto">
-      <br>
-      <br>
+	<!-- header 
+   ================================================== -->
+   <header>   	
+   	<div class="row">
 
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
-      <main>
-        <div class="container rcorners1" style="height:100%;width:100%; padding-top:20px;opacity:0.8;">
-          <nav class="container" style="height:100%;width:100%;opacity:0.8; text-align: center;">
-            <ul style="padding:0;">
-              <li>>>> </li>
-              <li id="home" class="home"> /home </li>
-              <li id="overview" class="overview"> /overview </li>
-              <li id="about" class="about"> /projects </li>
-              <li id="resume" class="resume"> /resume </li>
+	   		<div class="logo">
+		         <a href="index.html">Portfolio</a>
+		      </div>		      
 
-              <li id="contact" class="contact"> /contact </li>
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
+						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>					
+						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>				
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
 
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
 
-            </ul>
-          </nav>
-          <h1>>EL HARI CHADI:$<span class="cursor">|</span></h1>
-          <h3 id="titre">Your Terminal:</h3>
+   	<div class="intro-overlay"></div>	
 
-          <img class="center fit" id="core" src="i/back.png" style="padding-bottom: 20px;padding-top: 20px;width:auto;margin-top: 20px; opacity: 0.3">
+   	<div class="intro-content">
+   		<div class="row">
 
-          <div class="footer-social-icons" style="text-align: center">
-            <ul class="social-icons">
-              <li><a href="https://linkedin.com/in/chadi-elhari" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-              <li><a href="https://github.com/elhari-chadi" class="social-icon"> <i class="fa fa-github"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <script type="text/javascript" language="JavaScript">
-          function set_body_height() { // set body height = window height
-            $('body').height($(window).height());
-          }
-          $(document).ready(function() {
-            $(window).bind('resize', set_body_height);
-            set_body_height();
-          });
-        </script>
-        <script type="text/javascript" src="terminal.js">
-        </script>
-        <div id="cont">
-          <div id="test">
-            <div id="console" style="scroll-behavior: smooth;"></div>
-          </div>
-        </div>
-        <div id="cont2">
-          <div id="test2">
-            <div id="c2"></div>
-          </div>
-        </div>
-        <div id="mnt"></div>
-      </main>
+   			<div class="col-twelve">
 
-    </div>
-    <div class="hidden">
-      <div id="about-content">
-        <h2>############</h2>
-        <h4># Second year PFA</h4>
-        <a href="reports/pfa2a.pdf">
-          <h2>VEHICLE SECURITY AND DRIVING ASSISTANT WITH RASPBERRY PI:$ <span class="cursor"></span></h2>
-        </a>
-        <h5># ENSIAS, March 30th 2020 - June 28th 2020</h5>
-        <pre>
-       . . . . ; ? S @ @ @ @ @ @ S ? ; . . . .
-       . . ; S @ @ S * + ; ; + * S @ @ S ; . .
-       , ? @ @ * , . . . . . . . . , * @ @ ? ,
-       ? @ @ ? ; ; ; ; ; ; ; ; ; ; ; ; ? @ @ ?
-       @ @ @ @ @ @ @ @ @ * * @ @ @ @ @ @ @ @ @
-       @ @ % , ; * # @ @ * * @ @ # * ; , % @ @
-       ? @ @ ; . . , ? @ @ @ @ ? , . . ; @ @ ?
-       , ? @ @ * , . . ? @ @ ? . . , * @ @ ? ,
-       . . ; S @ @ S * ? @ @ ? * S @ @ S ; . .
-       . . . . ; ? S @ @ @ @ @ @ S ? ; . . . .
-</pre>
-        <p>
-          As part of my second year's final project, I worked in collaboration with a team to :
-          <br>
-          - Study machine learning procedures and algorithmes in the context of the autonomous car.
-          <br>
-          - Study image processing libraries (OpenCV, Scikit-Image, Scipy and Numpy).
-          <br>
-          - Design, develop and implement a vehicle security and driving assistance system using Raspberry PI.
-        </p>
+	   			<h5>Hello, World.</h5>
+	   			<h1>I'm Chadi EL HARI.</h1>
 
-        <h2>############</h2>
-        <h4># First year internship</span></h4>
-        <a href="reports/stage1a.pdf">
-          <h2>HUMAN RESSOURCES MANAGEMENT WEB APP:$ <span class="cursor"></h2>
-        </a>
-        <h5># AMEXS, October 3rd 2020 - November 26th 2020</h5>
-        <pre>
-       . . . . . . . . , : : : . . . . . . . .
-       . . . . . . ; S @ @ @ @ S ; . . . . . .
-       . . . . . : @ @ @ @ @ @ @ @ ; . . . . .
-       . . . . . , @ @ @ @ @ @ @ @ : . . . . .
-       . . . . , ; + % # @ @ # % + ; : . . . .
-       . . , ? @ @ @ S % % % % S @ @ @ % , . .
-       . . * @ @ @ @ @ @ @ @ @ @ @ @ @ @ ? . .
-       . . S @ @ @ @ @ @ @ @ @ @ @ @ @ @ # , .
-       . . ? @ @ @ @ @ @ @ @ @ @ @ @ @ @ % . .
-       . . . ; + * * * * * * * * * * + ; . . .
-</pre>
-        <p>
-          As part of my first year's internship project, I worked as a Full Stack Developer for AMEXS to :
-          <br>
-          - Design and produce a WEB application capable of giving access to arrangement, management and
-          storage of the various contact details and informations concerning the personnel of the company.
-          <br>
-          # Used technologies : Bootstrap / PHP / MySQL.
-
-        </p>
-
-        <h2>############</h2>
-
-        <h4># Compilation course project</h4>
-        <a href="reports/compilation.pdf">
-          <h2>DEVELOPING A COMPILATOR FOR A LANGUAGE SIMILAR TO C : ZX COMPILATOR:$ <span class="cursor"></span></h2>
-        </a>
-        <h5># ENSIAS, January 2020 - March 2020</h5>
-        <pre>
-       . . . . . . . . : + + : . . . . . . . .
-       . . . , + * : , # @ @ # , : * ; , . . .
-       . . , % @ @ @ @ @ @ @ @ @ @ @ @ % . . .
-       . . , ; @ @ @ @ S ? ? S @ @ @ @ ; . . .
-       . * # @ @ @ @ + . . . . + @ @ @ # # * .
-       . * # # @ @ @ + . . . . + @ @ @ @ # * .
-       . . . ; @ @ @ @ S ? ? S @ @ @ @ ; , . .
-       . . . % @ @ @ @ @ @ @ @ @ @ @ @ % , . .
-       . . . , ; * : , # @ @ # , : * ; , . . .
-       . . . . . . . . : + + : . . . . . . . .
-</pre>
-        <p>
-          As part of the compilation course we take at ENSIAS, I worked in collaboration with a team to :
-          <br>
-          - Create a "ZX" language similar to C, through elaborating a certain grammar.
-          <br>
-          - Developed, and wrote from scratch a lexer and a parser for the "ZX" language.
-          <br>
-          - Performed tests through input codes to preview different outputs of the compilator.
-        </p>
+	   			<p class="intro-position">
+	   				<span>Final year engineering student at ENSIAS-Rabat College of Engineering</span>
+	   			</p>
 
 
-        <h2>############</h2>
-        <h4># First year PFA</span></h4>
-        <a href="reports/pfa1a.pdf">
-          <h2>SIMULATING A THERAPEUTIC ROBOT FOR PATIENT REHABILITATION OF STROKE SURVIVORS:$ <span class="cursor"></h2>
-        </a>
-        <h5># ENSIAS, March 2nd 2020 - June 2nd 2020</h5>
-        <pre>
+				   <div class="row button-section">
+					<div class="col-twelve">
+						<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+						<a href="cv.pdf"  class="button button-primary" title="View CV">View CV</a>
+					</div>   		
+				</div>
 
-       . . . . . . . . . . . . . . . . . . . .
-       . . . . . . ; : ; * * ; : ; . . . . . .
-       . . . . . . , S # @ @ # S , . . . . . .
-       . . . . . : : % % % % % % : : . . . . .
-       . . . . , @ * @ @ @ @ @ @ * @ , . . . .
-       . . . . , @ * @ @ @ @ @ @ * @ , . . . .
-       . . . . . : : @ @ @ @ @ @ : : . . . . .
-       . . . . . . . ; @ % % @ ; . . . . . . .
-       . . . . . . . . ? : : ? . . . . . . . .
-       . . . . . . . . . . . . . . . . . . . .
-</pre>
-        <p>
-          As part of my first year's final project, I worked in collaboration with a team to :
-          <br>
-          - Study the rehabilitation mechanism of stroke survivors.
-          <br>
-          - Study the realization of an exoskeleton robot for rehabilitation.
-          <br>
-          - Design, develop and produce a simulation of the H1 robot for the rehabilitation of stroke survivors.
-        </p>
+	   			
 
-      </div>
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
 
-      <div id="contact-content">
-        <h2>contact-me:$ <span class="cursor"></span></h2>
-        <p> You can contact me at the emails and phone number
-          below.</p>
-        <ul>
-          <li>Phone: (212)626208830</li>
-          <li>Email: chadi_elhari@um5.ac.ma</li>
-          <li>Email: elhari.chadi@gmail.com</li>
-        </ul>
-      </div>
-    </div>
+   	<ul class="intro-social">        
+         <li><a href="https://linkedin.com/in/chadi-elhari"><i class="fa fa-linkedin"></i></a></li>
+         <li><a href="https://github.com/elhari-chadi"><i class="fa fa-github"></i></a></li>
+      </ul> <!-- /intro-social -->      	
+
+   </section> <!-- /intro -->
 
 
-    <script src="js/main.js"></script>
-  </div>
+   <!-- about section
+   ================================================== -->
+   <section id="about">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>About</h5>
+   			<h1>Let me introduce myself.</h1>
+
+   			<div class="intro-info">
+
+
+   				<p class="lead">Final year engineering student at ENSIAS-Rabat College of Engineering (Ecole nationale supérieure d'informatique et d'analyse des systèmes) studying computer science, more specifically, embedded and mobile systems.</p>
+   			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+
+   		<div class="col-six tab-full">
+
+   			<h3>Profile</h3>
+   			<p>Your inquisitiveness drove you here, but my curiosity drives every passion I possess for understanding how things work. In someway that's my essence, and that's what motivates me everyday to seek even more.</p>
+
+   			<ul class="info-list">
+   				<li>
+   					<strong>Fullname:</strong>
+   					<span>Chadi EL HARI</span>
+   				</li>
+   				<li>
+   					<strong>Birth Date:</strong>
+   					<span>October 25, 1999</span>
+   				</li>
+   				<li>
+   					<strong>Field of studies:</strong>
+   					<span>Embedded and mobile systems engineering</span>
+   				</li>
+   				<li>
+   					<strong>Website:</strong>
+   					<span>www.elhari-chadi.github.io</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<span>chadi_elhari@um5.ac.ma</span>
+   				</li>
+
+   			</ul> <!-- /info-list -->
+
+   		</div>
+
+   		<div class="col-six tab-full">
+
+   			<h3>Skills</h3>
+   			<p> I would definitely point out that I'm interested in embedded programming, machine learning and circuit design.</p>
+
+				<ul class="skill-bars">
+				   <li>
+				   	<div class="progress percent100"></div>
+				   	<strong>HTML/CSS/JS/BOOTSTRAP</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent100"></div>
+				   	<strong>C/C++/Java</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent100"></div>
+				   	<strong>Python:Numpy/MySQL</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent100"></div>
+				   	<strong>PHP/DJANGO-PYTHON</strong>
+				   </li>
+				   <li>
+
+				   	<div class="progress percent100"></div>
+				   	<strong>OpenSim/OpenCV/Scikit-Image/DLib</strong>
+				   </li>
+				   <li>
+				   <div class="progress percent100"></div>
+				   <strong>RaspberryPi</strong>
+			   </li>
+      
+				</ul> <!-- /skill-bars -->		
+
+   		</div>
+
+   	</div>
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+   			<a href="cv.pdf" title="View CV" class="button button-primary">Download CV</a>
+   		</div>   		
+   	</div>
+
+   </section> <!-- /process-->    
+
+
+   <!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Resume</h5>
+   			<h1>More of my credentials.</h1>
+
+   			<p class="lead">Don't hesitate to take a quick look at my <a href="#portfolio">projects</a>, you can use the button at the top of this page for that, or your can view my <a href="cv.pdf">CV</a>, which contains more details about me.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Work Experience</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-briefcase"></i>
+					</div>
+
+					<div class="timeline-header">
+						<h3>Engineer internship (Second year internship)</h3>
+						<p>August 16th 2021 - September 30th 2021</p>
+					</div>
+
+					<div class="timeline-content">
+						<h4>ATOS - SETTING UP OF A TECHNICAL BASE FOR AN AUGMENTED REALITY APPLICATION</h4>
+						<p>
+						 As part of my second year's internship project, I worked with a development team for ATOS to :
+						 <br>
+						 - An analysis of the needs and the environment necessary to create a technical base for an AR application.
+						 <br>
+						 - The design and production of a technical base for an augmented reality API, which can be integrated into an e-commerce site.
+						 <br>
+						 # Used technologies : Python / OpenCV / DLib.
+			   
+					   </p>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Engineer internship (First year internship)</h3>
+	   					<p>October 3rd 2020 - November 26th 2020</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>AMEXS - HUMAN RESSOURCES MANAGEMENT WEB APP</h4>
+	   					<p>
+							As part of my first year's internship project, I worked as a Web Developer for AMEXS to :
+							<br>
+							- Design and produce a WEB application capable of giving access to arrangement, management and
+							storage of the various contact details and informations concerning the personnel of the company.
+							<br>
+							# Used technologies : Bootstrap / PHP / MySQL.
+				  
+						  </p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+   	
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Education</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Engineer Degree</h3>
+	   					<p>2019 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>ENSIAS-Rabat College of Engineering (Ecole nationale supérieure d'informatique et d'analyse des systèmes)</h4>
+						   <br>
+						   <p>Embedded and mobile systems engineering</p>
+						   <br>
+					</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>CLASSES PRÉPARATOIRES AUX GRANDES ÉCOLES</h3>
+	   					<p>2017 - 2019</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>CPGE Carnot Prepa</h4>
+						   <br>
+						   <p>MP : Math SUP & Math SPE</p>
+						   <br>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+				   <div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-graduation-cap"></i>
+					</div>
+
+					<div class="timeline-header">
+						<h3>INTERNATIONAL BACCALAUREATE DIPLOMA</h3>
+						<p>2016 - 2017</p>
+					</div>
+
+					<div class="timeline-content">
+						<h4>Moulay Ismail High School</h4>
+						<br>
+						<p>Opt FR SM B</p>
+						<br>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
+
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+		
+	</section> <!-- /features -->
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Portfolio</h5>
+   			<h1>Check Out Some of My Works.</h1>
+
+   			<p class="lead">Get detailed insights about tasks I have accomplished during my internships or academic projects.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/pfa2a.png" alt="Liberty">
+	                  <a href="#modal-01" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">VEHICLE SECURITY AND DRIVING ASSISTANT WITH RASPBERRY PI</h3>	     					    
+		     					    	 <span class="folio-types">
+											Second year PFA
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/pfa1a.png" alt="Shutterbug">
+	               	<a href="#modal-02" class="overlay">              		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">SIMULATING A THERAPEUTIC ROBOT FOR PATIENT REHABILITATION OF STROKE SURVIVORS</h3>	     					    
+		     					    	<span class="folio-types">
+											First year PFA
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/stage1a.PNG"alt="Clouds">
+	                  <a href="#modal-03" class="overlay">             		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">HUMAN RESSOURCES MANAGEMENT WEB APP</h3>	     					    
+		     					    	<span class="folio-types">
+											First year internship
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/stage2a.png" alt="Beetle">
+	                  <a href="#modal-04" class="overlay">                  	                 
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">SETTING UP OF A TECHNICAL BASE FOR AN AUGMENTED REALITY APPLICATION</h3>	     					    
+		     					    	<span class="folio-types">
+											Second year internship
+		     					      </span>		     		
+		     					   </div>  	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->     
+
+  
+
+	            <!-- modal popups - begin
+	            ============================================================= -->
+	            <div id="modal-01" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/pfa2a.png" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Second year PFA</h4>		      
+					      <p>VEHICLE SECURITY AND DRIVING ASSISTANT WITH RASPBERRY PI</p>
+
+					      <div class="categories">ENSIAS</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="reports/pfa2a.pdf">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-02 -->
+
+				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/pfa1a.png" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>First year PFA</h4>		      
+					      <p>SIMULATING A THERAPEUTIC ROBOT FOR PATIENT REHABILITATION OF STROKE SURVIVORS</p>
+
+					      <div class="categories">ENSIAS</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="reports/pfa1a.pdf">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-03 -->
+
+				   <div id="modal-03" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/stage1a.PNG" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>First year internship</h4>		      
+					      <p>HUMAN RESSOURCES MANAGEMENT WEB APP</p>
+
+					      <div class="categories">AMEXS</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="reports/stage1a.pdf">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-04 -->
+
+				   <div id="modal-04" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/stage2a.png" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Second year internship</h4>		      
+					      <p>SETTING UP OF A TECHNICAL BASE FOR AN AUGMENTED REALITY APPLICATION</p>
+
+					      <div class="categories">ATOS</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="#">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-04 -->
+
+
+
+				   <!-- modal popups - end
+	            ============================================================= -->
+
+	         </div> <!-- /portfolio-wrapper --> 
+
+   		</div>  <!-- /twelve -->   
+
+   	</div> <!-- /portfolio-content --> 
+		
+	</section> <!-- /portfolio --> 
+
+
+	<!-- CTA Section
+   ================================================== -->
+	<section id="cta" class="grey-section">
+
+   	<div class="row cta-content">
+
+   		<div class="col-twelve section-ads">  
+
+		     	
+
+   		</div>
+
+   	</div> <!-- /cta-content -->
+
+   </section> <!-- /cta --> 
+
+	
+	<!-- services Section
+   ================================================== -->
+
+
+
+	<!-- stats Section
+   ================================================== -->
+
+
+	
+   <!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contact</h5>
+   			<h1>I'd Love To Hear From You.</h1>
+
+   			<p class="lead">Want to connect ? Please fill out the following form and leave me a message.</p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+   	<div class="row contact-form">
+
+   		<div class="col-twelve">
+
+            <!-- form -->
+            <form name="contactForm" id="contactForm" method="post" action="">
+      			<fieldset>
+
+                  <div class="form-field">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+                  </div>
+                  <div class="form-field">
+	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+	               </div>
+                  <div class="form-field">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+	               </div>                       
+                  <div class="form-field">
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+	               </div>                      
+                 <div class="form-field">
+                     <button class="submitform">Submit</button>
+                     <div id="submit-loader">
+                        <div class="text-loader">Sending...</div>                             
+       				      <div class="s-loader">
+								  	<div class="bounce1"></div>
+								  	<div class="bounce2"></div>
+								  	<div class="bounce3"></div>
+								</div>
+							</div>
+                  </div>
+
+      			</fieldset>
+      		</form> <!-- Form End -->
+
+            <!-- contact-warning -->
+            <div id="message-warning">            	
+            </div>            
+            <!-- contact-success -->
+      		<div id="message-success">
+               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+      		</div>
+
+         </div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /contact-form -->
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Where to find me</h5>
+
+   			<p>
+            Meknes<br>
+            50000, Morocco<br>
+            </p>
+
+   		</div>
+
+   		<div class="col-four tab-full collapse">
+
+   			<div class="icon">
+   				<i class="icon-mail"></i>
+   			</div>
+
+   			<h5>Email Me At</h5>
+
+   			<p>chadi_elhari@um5.ac.ma<br>
+			   	elhari.chadi@gmail.com			     
+			   </p>
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Call Me At</h5>
+
+   			<p>Phone: (+212) 6 26 20 99 30<br>
+			   </p>
+
+   		</div>
+   		
+   	</div> <!-- /contact-info -->
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+			      <li><a href="https://linkedin.com/in/chadi-elhari"><i class="fa fa-linkedin"></i></a></li>
+			      <li><a href="https://github.com/elhari-chadi"><i class="fa fa-github"></i></a></li>
+			   </ul> 
+	      		
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>© Copyright 2021</span> 
+		        	<span>Chadi EL HARI - Portfolio</a></span>	         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
 </body>
 
 </html>
