@@ -224,42 +224,25 @@
 
 			var sLoader = $('#submit-loader');
 
-			$.ajax({      	
-
-		      type: "POST",
-		      url: "http://elhari-chadi.unaux.com/sendEmail.php",
-		      data: $(form).serialize(),
-		      beforeSend: function() { 
-
-		      	sLoader.fadeIn(); 
-
-		      },
-		      success: function(msg) {
-
-	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
-	            }
-
-		      },
-		      error: function() {
-
-		      	sLoader.fadeOut(); 
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
-
-		      }
-
-	      });     		
+			try {
+				Email.send({
+					SecureToken : "c3b02e08-09d6-459d-b316-ea7912cdb7d7",
+					To : 'portfolio.mailer.ec@gmail.com',
+					From : 'elhari.chadi@gmail.com',
+					Subject : "Portfolio Message from : " +document.querySelector('#contactName').value + " | Subject : " + document.querySelector('#contactSubject').value,
+					Body : "<b>Name : </b>" + document.querySelector('#contactName').value + "<br> <b>Original email address : </b>" + document.querySelector('#contactEmail').value+ "<br> <b>Message : </b>" + document.querySelector('#contactMessage').value 
+				})
+				  sLoader.fadeIn();
+				  message => alert(message)
+				sLoader.fadeOut(); 
+				$('#message-warning').hide();
+				$('#contactForm').fadeOut();
+				$('#message-success').fadeIn();  
+			
+				} catch (e) {
+				$('#message-warning').html("Something went wrong. Please try again.");
+				$('#message-warning').fadeIn();
+				  }     		
   		}
 
 	});
