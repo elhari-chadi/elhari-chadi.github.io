@@ -227,7 +227,7 @@
 			$.ajax({      	
 
 		      type: "POST",
-		      url: "inc/sendEmail.php",
+		      url: "http://elhari-chadi.unaux.com/sendEmail.php",
 		      data: $(form).serialize(),
 		      beforeSend: function() { 
 
