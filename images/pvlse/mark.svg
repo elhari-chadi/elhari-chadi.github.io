@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 916" width="1000" height="916" role="img" aria-label="pvlse">
+  <title>pvlse mark</title>
+  <!--
+    A1 — the pvlse mark. A level line that drops into a single deep v.
+    The shoulders are load-bearing: they are what makes this a beat and not
+    just a letter. Do not trim them further.
+
+    Authored as an explicit outline rather than a stroked centreline so that
+    every renderer (flutter_svg, Android VectorDrawable, iOS, rasterisers)
+    produces identical geometry with no miter-limit risk.
+
+    Generating centreline, if the shape ever needs retuning:
+      M 82.5 82.5  L 300 82.5  L 500 662.5  L 700 82.5  L 917.5 82.5
+      stroke-width 165, linecap butt, linejoin miter, miterlimit 4
+
+    Measured, against a mark width of 1000:
+      stroke weight ......... 165  (16.5%)   floor for A4 is 8.3% (2/24)
+      inner counter at y=165  168.6 (16.9%)  first thing to close at 24px
+      bounding box .......... 1000 x 916     aspect 1.09:1
+      arm angle ............. 19.0 deg off vertical, 38 deg included
+  -->
+  <path fill="#FF4544" fill-rule="nonzero"
+        d="M82.5 0
+           L358.8 0
+           L500 409.4
+           L641.2 0
+           L917.5 0
+           L917.5 165
+           L758.8 165
+           L500 915.7
+           L241.2 165
+           L82.5 165
+           Z"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 916" width="2200" height="916" role="img" aria-label="pvlse pulse">
+  <title>pvlse pulse trace</title>
+  <!--
+    The full-length trace. Identical v to mark.svg — same stroke weight, same
+    409.4 interior apex, same 915.7 tip, same 38-degree included angle — with
+    the flats run out to length. It is literally the same drawing, extended.
+
+    Uses:
+      - A5, the wordmark's v (scale to the type family's x-height and weight;
+        the v's geometry wins, per A5's binding note)
+      - a section rule / divider
+      - the A6 splash, if the trace is animated drawing left to right
+
+    NOT an icon. At 2.4:1 it fails every square consumer; that is what
+    mark.svg is for.
+
+    Generating centreline:
+      M 82.5 82.5  L 900 82.5  L 1100 662.5  L 1300 82.5  L 2117.5 82.5
+      stroke-width 165, linecap butt, linejoin miter, miterlimit 4
+  -->
+  <path fill="#FF4544" fill-rule="nonzero"
+        d="M82.5 0
+           L958.8 0
+           L1100 409.4
+           L1241.2 0
+           L2117.5 0
+           L2117.5 165
+           L1358.8 165
+           L1100 915.7
+           L841.2 165
+           L82.5 165
+           Z"/>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" fill="none">
+  <defs>
+    <radialGradient id="core" cx="42%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#e11d48" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#e11d48" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#0b0b0c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f4efe6" stop-opacity="0"/>
+      <stop offset="38%" stop-color="#f4efe6" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#f4efe6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M30 640 C 260 210, 720 70, 1380 240" stroke="url(#sweep)" stroke-width="1.2"/>
+  <path d="M60 760 C 380 290, 820 150, 1390 390" stroke="#f4efe6" stroke-opacity="0.1" stroke-width="1"/>
+  <path d="M180 120 C 520 40, 900 90, 1360 210" stroke="#e11d48" stroke-opacity="0.16" stroke-width="1.15"/>
+
+  <g transform="translate(220 580)" stroke="#f4efe6">
+    <ellipse rx="168" ry="64" fill="#f4efe6" fill-opacity="0.02" stroke-opacity="0.16" transform="rotate(24)"/>
+    <ellipse rx="118" ry="44" stroke-opacity="0.14" transform="rotate(24)"/>
+    <ellipse rx="64" ry="24" stroke-opacity="0.12" transform="rotate(24)"/>
+    <ellipse rx="48" ry="128" stroke-opacity="0.12"/>
+    <ellipse rx="48" ry="128" stroke-opacity="0.08" transform="rotate(40)"/>
+    <line x1="0" y1="-148" x2="0" y2="148" stroke-opacity="0.12"/>
+    <circle cy="-128" r="2.4" fill="#f4efe6" fill-opacity="0.4" stroke="none"/>
+  </g>
+
+  <g transform="translate(980 340)">
+    <circle r="220" fill="url(#core)"/>
+
+    <ellipse rx="390" ry="148" fill="#e11d48" fill-opacity="0.05" transform="rotate(-18)"/>
+    <ellipse rx="390" ry="148" stroke="#f4efe6" stroke-opacity="0.32" stroke-width="1.2" transform="rotate(-18)"/>
+    <ellipse rx="318" ry="120" stroke="#f4efe6" stroke-opacity="0.22" transform="rotate(-18)"/>
+    <ellipse rx="246" ry="92" stroke="#e11d48" stroke-opacity="0.55" stroke-width="1.5" transform="rotate(-18)"/>
+    <ellipse rx="174" ry="64" stroke="#f4efe6" stroke-opacity="0.28" transform="rotate(-18)"/>
+    <ellipse rx="102" ry="38" stroke="#f4efe6" stroke-opacity="0.2" transform="rotate(-18)"/>
+
+    <ellipse rx="148" ry="338" stroke="#f4efe6" stroke-opacity="0.24" stroke-width="1.15"/>
+    <ellipse rx="148" ry="338" stroke="#f4efe6" stroke-opacity="0.16" transform="rotate(18)"/>
+    <ellipse rx="148" ry="338" stroke="#f4efe6" stroke-opacity="0.16" transform="rotate(-22)"/>
+    <ellipse rx="148" ry="338" stroke="#e11d48" stroke-opacity="0.22" transform="rotate(42)"/>
+    <ellipse rx="148" ry="338" stroke="#f4efe6" stroke-opacity="0.12" transform="rotate(-48)"/>
+    <ellipse rx="148" ry="338" stroke="#f4efe6" stroke-opacity="0.1" transform="rotate(68)"/>
+
+    <line x1="0" y1="-372" x2="0" y2="372" stroke="#f4efe6" stroke-opacity="0.22" stroke-width="1.1"/>
+    <line x1="-42" y1="-352" x2="42" y2="-352" stroke="#f4efe6" stroke-opacity="0.28"/>
+    <line x1="-28" y1="352" x2="28" y2="352" stroke="#f4efe6" stroke-opacity="0.18"/>
+
+    <g transform="rotate(-18)">
+      <circle cx="246" r="4.4" fill="#e11d48"/>
+      <circle cx="246" r="16" stroke="#e11d48" stroke-opacity="0.55"/>
+      <circle cx="246" r="28" stroke="#e11d48" stroke-opacity="0.2"/>
+      <circle cx="-318" r="2.8" fill="#f4efe6" fill-opacity="0.55"/>
+      <circle cx="318" r="2.8" fill="#f4efe6" fill-opacity="0.4"/>
+      <circle cx="-174" r="2" fill="#f4efe6" fill-opacity="0.35"/>
+      <path d="M174 -14 V14" stroke="#f4efe6" stroke-opacity="0.28"/>
+      <path d="M246 -16 V16" stroke="#e11d48" stroke-opacity="0.45"/>
+      <path d="M318 -12 V12" stroke="#f4efe6" stroke-opacity="0.22"/>
+    </g>
+
+    <circle cy="-338" r="3.2" fill="#f4efe6" fill-opacity="0.65"/>
+    <circle cy="338" r="2.6" fill="#f4efe6" fill-opacity="0.4"/>
+
+    <!-- intersecting plane -->
+    <path d="M-210 -40 L 240 -110 L 270 70 L -180 140 Z" stroke="#f4efe6" stroke-opacity="0.1" fill="#f4efe6" fill-opacity="0.015"/>
+  </g>
+</svg>
